@@ -6,6 +6,9 @@ int main () {
   
   // Make sure the bit in this position is "on"
   // Print the output
+
+  // Now make sure it's "off"
+  // Print the output
   
   return 0;
 }
