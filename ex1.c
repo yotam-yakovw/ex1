@@ -74,7 +74,7 @@ int main() {
   sum them up and print the result in hexadecimal base
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
 
-  int oct1, oct2, hex, code;
+  int oct1, oct2, hex, code1, code2, code3, code4;
 
   printf("Please enter the first number (octal): \n");
   scanf("%o", &oct1);
@@ -82,11 +82,11 @@ int main() {
   scanf("%o", &oct2);
   hex = oct1 + oct2;
   printf("The sum in hexadecimal: %X\n", hex);
-  code = ((hex >> 11) & 1)\
-         + (10*((hex >> 7) & 1))\
-         + (100*((hex >> 5) & 1))\
-         + (1000*((hex >> 3) & 1));
-  printf("The 3,5,7,11 bits are: %04d\n", code);
+  code1 = (hex >> 3) & 1;
+  code2 = (hex >> 5) & 1;
+  code3 = (hex >> 7) & 1;
+  code4 = (hex >> 11) & 1;
+  printf("The 3,5,7,11 bits are: %d%d%d%d\n", code1, code2, code3, code4);
 
   printf("Bye!\n");
   
